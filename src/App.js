@@ -8,7 +8,7 @@ import { SmallPersonListItem } from './components/people/SmallPersonListItem';
 import { LargeProductListItem } from './components/products/LargeProductListItem';
 import { Modal } from './modals/Modal';
 
-const LeftHandComponent = () => <h1 style={{backgroundColor: 'green'}}>Left!</h1>
+const LeftHandComponent = () => <p style={{backgroundColor: 'green'}}>Left!</p>
 
 const RightHandComponent = () => <p style={{backgroundColor: 'red'}}>Right!</p>
 
@@ -49,6 +49,9 @@ const products = [{
 function App() {
   return (
     <>
+    <h1>React Design Patterns</h1>
+    <h2>Container components</h2>
+    <h2>Layout components</h2>
     <Modal>
       <RegularList 
         items={people}
