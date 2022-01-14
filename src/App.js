@@ -6,6 +6,7 @@ import { NumberedList } from './components/NumberedList';
 import { LargePersonListItem } from './components/people/LargePersonListItem';
 import { SmallPersonListItem } from './components/people/SmallPersonListItem';
 import { LargeProductListItem } from './components/products/LargeProductListItem';
+import { Modal } from './modals/Modal';
 
 const LeftHandComponent = () => <h1 style={{backgroundColor: 'green'}}>Left!</h1>
 
@@ -48,6 +49,13 @@ const products = [{
 function App() {
   return (
     <>
+    <Modal>
+      <RegularList 
+        items={people}
+        resourceName="person"
+        itemComponent={SmallPersonListItem}
+      />
+    </Modal>
       <SplitScreen leftWeight={1} rightWeight={3}>
         <LeftHandComponent />
         <RightHandComponent />
